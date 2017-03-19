@@ -5,9 +5,6 @@ HEADERS = includes.h externs.h
 bjSim: $(OBJS)
 	nvcc $(CFLAGS) -o $@ $(OBJS)
 
-bjcuda: play.o Deck.o init.o
-	nvcc $(CFLAGS) -o $@ play.o Deck.o init.o
-
 bjSim.o: $(HEADERS) bjSim.cu
 	nvcc $(CFLAGS) -c bjSim.cu
 
@@ -19,6 +16,9 @@ init.o: $(HEADERS) init.cu
 
 Deck.o: $(HEADERS) Deck.cu
 	nvcc $(CFLAGS) -c Deck.cu
+
+evalHand.o: $(HEADERS) evalHand.cu
+	nvcc $(CFLAGS) -c evalHand.cu
 
 clean:
 	rm -f bjcuda bjSim *.o
