@@ -8,3 +8,4 @@ To Do:
 * Set up verbosity levels
 * Load, save results
 * Display learned policy table
+* Technical notes
