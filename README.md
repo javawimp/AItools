@@ -4,5 +4,7 @@ Memory preallocated from main program.
 
 To Do:
 * Documentation
+* Expand command line arguments
+* Set up verbosity levels
 * Load, save results
-* Show learned policy table
+* Display learned policy table
